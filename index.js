@@ -16,7 +16,7 @@ function generateOrderNumber() {
   return 'Order-' + crypto.randomBytes(8).toString('hex');
 }
 
-app.post("/checkServer", (req, res) => {
+app.get("/checkServer", (req, res) => {
   console.log("Check Server API hit");
   console.log("Request: ", req.body);
   console.log("Request: ", req.params);
